@@ -55,12 +55,31 @@ code_thesis/
 ## Requirements
 
 ### Software
-- **R:** 4.0+ with packages:
-  - `forecast`, `data.table`, `dplyr`, `ggplot2`, `keras`, `reticulate`
-  - `ParBayesianOptimization`, `cluster`, `tseries`, `caret`
-- **Python:** 3.10 with:
-  - `tensorflow>=2.10`, `keras`, `pandas`
+- **R:** 4.5.1 (via RStudio 2024.12.1.563)
+  - Time series: `forecast`, `tseries`, `urca`, `zoo`, `tsibble`
+  - Data manipulation: `data.table`, `dplyr`, `tidyr`, `tibble`, `lubridate`, `readxl`, `stringr`, `reshape2`
+  - Machine learning: `caret`, `recipes`, `Metrics`
+  - Dimension reduction: `psych`, `cluster`
+  - Statistical diagnostics: `MASS`, `car`, `nortest`, `e1071`, `stats`
+  - Missing data: `Amelia`, `VIM`
+  - Visualization: `ggplot2`, `ggpubr`, `patchwork`, `gridExtra`, `corrplot`, `viridis`, `RColorBrewer`, `grid`
+  - Optimization: `ParBayesianOptimization`, `rBayesianOptimization`, `furrr`, `future`, `purrr`
+  - Integration: `reticulate`, `tensorflow`, `keras`, `knitr`
 
+- **Python:** 3.11
+  - Deep learning: `tensorflow==2.15.1`, `keras==2.15.0`
+  - Numerical: `numpy`, `pandas`, `scipy`
+  - Persistence: `h5py`
+
+### Hardware
+- **Processor:** Intel Core i7-1185H (2.5 GHz, 4 cores)
+- **RAM:** 32 GB
+- **OS:** Windows 11 x64
+
+### Data
+- Energy consumption (Eneco Excel files, 15-minute resolution)
+- Building IoT sensor data (CSV, 5-minute resolution)
+- Weather data (KNMI fixed-width text, hourly resolution)
 ### Data
 - Energy consumption (Eneco Excel files)
 - Sensor data (CSV)
