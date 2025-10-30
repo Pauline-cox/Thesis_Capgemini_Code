@@ -46,13 +46,6 @@ stopifnot(length(available_env) > 0)
 Xtr <- as.matrix(train_data[, ..available_env])
 Xte <- as.matrix(test_data[,  ..available_env])
 
-# Impute missing values using training means
-for (j in seq_len(ncol(Xtr))) {
-  mu <- mean(Xtr[, j], na.rm = TRUE)
-  Xtr[is.na(Xtr[, j]), j] <- mu
-  Xte[is.na(Xte[, j]), j] <- mu
-}
-
 # --- Standardize with Training Statistics ---
 cvec <- colMeans(Xtr)
 svec <- apply(Xtr, 2, sd); svec[svec == 0] <- 1
